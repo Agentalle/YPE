@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YPE Event Winners</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="halo"></div>
+    <main class="container">
+      <header class="hero">
+        <p class="tag">Church Spirit • Fun Competition • Monthly Growth</p>
+        <h1>YPE Event Winners</h1>
+        <p>
+          Track progress every first Sunday of the month. Each update increases a
+          participant's bar, so everyone can cheer the journey to annual winners.
+        </p>
+      </header>
+
+      <section class="controls" aria-label="Score controls">
+        <label for="game-select">Choose Game:</label>
+        <select id="game-select"></select>
+        <label for="person-select">Choose Winner:</label>
+        <select id="person-select"></select>
+        <button id="update-score">Add Sunday Marks (+10)</button>
+      </section>
+
+      <section id="boards" class="boards" aria-live="polite"></section>
+    </main>
+
+    <template id="game-template">
+      <article class="game-card">
+        <div class="card-header">
+          <h2></h2>
+          <p>Updated monthly • Bars grow with marks</p>
+        </div>
+        <div class="chart"></div>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
